@@ -1,0 +1,9 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext InventoryContext implements InventoryDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: InventoryDomain"
+  type FEATURE
+
+}
+

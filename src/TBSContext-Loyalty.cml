@@ -1,0 +1,9 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext LoyaltyContext implements LoyaltyDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: LoyaltyDomain"
+  type FEATURE
+
+}
+

@@ -1,0 +1,20 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext ProductContext implements ProductDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: ProductDomain"
+  type FEATURE
+
+  Aggregate ProductAggregate {
+    Service ProductService {
+      void addProduct (@Product product);
+    }
+    Entity Product {
+      String productId
+      String name
+      String description
+      String manufacturer
+    }
+  }
+}
+

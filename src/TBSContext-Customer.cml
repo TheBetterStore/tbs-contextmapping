@@ -1,0 +1,9 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext CustomerContext implements CustomerDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: CustomerDomain"
+  type FEATURE
+
+}
+

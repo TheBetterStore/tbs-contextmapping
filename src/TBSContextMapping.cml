@@ -1,0 +1,29 @@
+import "./TBSDomains.cml"
+import "./TBSContext-Customer.cml"
+import "./TBSContext-Order.cml"
+import "./TBSContext-Product.cml"
+import "./TBSContext-Inventory.cml"
+import "./TBSContext-Shipping.cml"
+import "./TBSContext-Auth.cml"
+import "./TBSContext-Loyalty.cml"
+
+ContextMap TGSContextMap {
+  type = SYSTEM_LANDSCAPE
+  state = TO_BE
+  /* Add bounded contexts to this context map: */
+  contains CustomerContext
+  contains OrderContext
+  contains ProductContext
+  contains InventoryContext
+  contains ShippingContext
+  contains AuthContext
+  contains LoyaltyContext
+  
+  /* Define the context relationships: */
+  OrderContext <- ProductContext
+  OrderContext <- ShippingContext
+  OrderContext <- CustomerContext
+  CustomerContext <- LoyaltyContext
+
+}
+

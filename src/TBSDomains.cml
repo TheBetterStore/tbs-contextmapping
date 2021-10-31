@@ -1,0 +1,44 @@
+/* Domain & Subdomain Definitions */
+Domain TBSDomain {
+	Subdomain ProductDomain {
+		type = CORE_DOMAIN
+		domainVisionStatement = "Subdomain managing the product catalogue."
+	}
+
+  Subdomain OrderDomain {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Subdomain managing customer orders."
+  }
+  
+	Subdomain ShippingDomain {
+		type = CORE_DOMAIN
+		domainVisionStatement = "Subdomain managing order shipping."
+	}
+
+	Subdomain InventoryDomain {
+		type = SUPPORTING_DOMAIN
+		domainVisionStatement = "Manages quantity of products in-stock"
+	}
+
+	Subdomain PaymentDomain {
+		type = GENERIC_SUBDOMAIN
+		domainVisionStatement = "Manages order payment."
+	}
+
+	Subdomain CustomerDomain {
+		type = GENERIC_SUBDOMAIN
+		domainVisionStatement = "Manages registered customers"
+	}
+
+	Subdomain AuthDomain {
+		type = GENERIC_SUBDOMAIN
+		domainVisionStatement = "Manages system user authentication and authorisation"
+	}
+
+  Subdomain LoyaltyDomain {
+    type = GENERIC_SUBDOMAIN
+    domainVisionStatement = "Manages system user authentication and authorisation"
+  }
+  
+}
+
