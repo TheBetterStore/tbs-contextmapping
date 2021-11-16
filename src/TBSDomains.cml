@@ -1,18 +1,29 @@
 /* Domain & Subdomain Definitions */
 Domain TBSDomain {
-	Subdomain ProductDomain {
+	Subdomain ProductCatalogueDomain {
 		type = CORE_DOMAIN
 		domainVisionStatement = "Subdomain managing the product catalogue."
 	}
 
+  
   Subdomain OrderDomain {
     type = CORE_DOMAIN
     domainVisionStatement = "Subdomain managing customer orders."
   }
   
-	Subdomain ShippingDomain {
+    Subdomain ReportingDomain {
+    type = SUPPORTING_DOMAIN
+    domainVisionStatement = "Subdomain managing reporting."
+  }
+  
+  Subdomain AdministrationDomain {
+    type = CORE_DOMAIN
+    domainVisionStatement = "Subdomain managing system administration and support activities."
+  }
+  
+	Subdomain FulfillmentDomain {
 		type = CORE_DOMAIN
-		domainVisionStatement = "Subdomain managing order shipping."
+		domainVisionStatement = "Subdomain managing order delivery."
 	}
 
 	Subdomain InventoryDomain {
@@ -26,19 +37,19 @@ Domain TBSDomain {
 	}
 
 	Subdomain CustomerDomain {
-		type = GENERIC_SUBDOMAIN
+		type = SUPPORTING_DOMAIN
 		domainVisionStatement = "Manages registered customers"
 	}
 
-	Subdomain AuthDomain {
+	Subdomain LoginDomain {
 		type = GENERIC_SUBDOMAIN
 		domainVisionStatement = "Manages system user authentication and authorisation"
 	}
 
   Subdomain LoyaltyDomain {
     type = GENERIC_SUBDOMAIN
-    domainVisionStatement = "Manages system user authentication and authorisation"
+    domainVisionStatement = "Manages the customer loyalty programme"
   }
-  
+
 }
 

@@ -1,9 +1,0 @@
-import "./TBSDomains.cml"
-
-
-BoundedContext ShippingContext implements ShippingDomain {
-  domainVisionStatement "This Bounded Context realizes the following subdomains: ShippingDomain"
-  type FEATURE
-
-}
-

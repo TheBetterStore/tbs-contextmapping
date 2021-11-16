@@ -1,29 +1,50 @@
 import "./TBSDomains.cml"
 import "./TBSContext-Customer.cml"
 import "./TBSContext-Order.cml"
-import "./TBSContext-Product.cml"
+import "./TBSContext-ProductCatalogue.cml"
 import "./TBSContext-Inventory.cml"
-import "./TBSContext-Shipping.cml"
-import "./TBSContext-Auth.cml"
+import "./TBSContext-Fulfillment.cml"
+import "./TBSContext-Login.cml"
 import "./TBSContext-Loyalty.cml"
+import "./TBSContext-Cart.cml"
+import "./TBSContext-Payment.cml"
+import "./TBSContext-Administration.cml"
+import "./TBSContext-Reporting.cml"
 
 ContextMap TGSContextMap {
   type = SYSTEM_LANDSCAPE
   state = TO_BE
   /* Add bounded contexts to this context map: */
   contains CustomerContext
-  contains OrderContext
-  contains ProductContext
+  contains ProductCatalogueContext
   contains InventoryContext
-  contains ShippingContext
-  contains AuthContext
+  contains FulfillmentContext
+  contains LoginContext
   contains LoyaltyContext
-  
-  /* Define the context relationships: */
-  OrderContext <- ProductContext
-  OrderContext <- ShippingContext
-  OrderContext <- CustomerContext
-  CustomerContext <- LoyaltyContext
+  contains OrderContext
+  contains PaymentContext
+  contains AdministrationContext
+  contains ReportingContext
 
+  /* Define the context relationships: */
+  OrderContext <- [PL] ProductCatalogueContext
+
+  OrderContext [D] <- [U,OHS] FulfillmentContext
+
+  OrderContext [SK] <-> [SK] CustomerContext
+
+  OrderContext [D] <- [U,OHS,PL] PaymentContext
+
+  CustomerContext [D] <- [U,OHS,PL] LoyaltyContext
+
+  ProductCatalogueContext [D] <- [U,OHS,PL]InventoryContext
+  
+  LoyaltyContext [D] <- [U,OHS,PL] FulfillmentContext
+  
+  FulfillmentContext [D] <- [U,OHS,PL] CustomerContext
+  
+  FulfillmentContext [SK] <-> [SK] OrderContext
+  
+  FulfillmentContext <- [PL] InventoryContext
 }
 

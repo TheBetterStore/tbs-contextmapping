@@ -1,0 +1,9 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext FulfillmentContext implements FulfillmentDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: FulfillmentDomain"
+  type FEATURE
+
+}
+

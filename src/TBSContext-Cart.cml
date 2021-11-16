@@ -1,0 +1,9 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext CartContext implements OrderDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: OrderDomain"
+  type FEATURE
+
+}
+

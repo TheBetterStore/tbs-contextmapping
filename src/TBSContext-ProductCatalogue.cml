@@ -1,8 +1,8 @@
 import "./TBSDomains.cml"
 
 
-BoundedContext ProductContext implements ProductDomain {
-  domainVisionStatement "This Bounded Context realizes the following subdomains: ProductDomain"
+BoundedContext ProductCatalogueContext implements ProductCatalogueDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: ProductCatalogueDomain"
   type FEATURE
 
   Aggregate ProductAggregate {

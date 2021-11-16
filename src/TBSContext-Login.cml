@@ -1,0 +1,9 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext LoginContext implements LoginDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: LoginDomain"
+  type FEATURE
+
+}
+

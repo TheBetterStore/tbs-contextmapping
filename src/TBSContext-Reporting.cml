@@ -1,0 +1,9 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext ReportingContext implements ReportingDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: ReportingDomain"
+  type FEATURE
+
+}
+

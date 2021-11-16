@@ -1,0 +1,9 @@
+import "./TBSDomains.cml"
+
+
+BoundedContext PaymentContext implements PaymentDomain {
+  domainVisionStatement "This Bounded Context realizes the following subdomains: PaymentDomain"
+  type FEATURE
+
+}
+
